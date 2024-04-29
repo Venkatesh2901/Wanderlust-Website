@@ -1,6 +1,3 @@
-const initData = require("./init/data.js");
-const Listing = require("./models/listing.js");
-
 if(process.env.NODE_ENV!="production"){
    require('dotenv').config();
 }
@@ -35,19 +32,9 @@ app.engine("ejs",ejsMate);
 
 const port = 8080;
 const dbUrl = process.env.ATLASTDB_URL;
-
-const initDB = async()=>{
-   await Listing.deleteMany({});
-   initData.data = initData.data.map((obj)=>({ ...obj,owner:"662fb96942ceccac7a6dcbdb"})); //map function create new array store in prev 
-   await Listing.insertMany(initData.data);
-   console.log("Data was Initialized");
-} 
-
-
-
+ 
 async function main(){
   await mongoose.connect(dbUrl);
-  initDB();
 };
 main().then(()=>{
   console.log("Connected to DB");
