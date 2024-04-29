@@ -31,4 +31,24 @@
            info.style.display = "none";
          }
      }
-  })
+  });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const leftArrow = document.querySelector(".left-arrow");
+    const rightArrow = document.querySelector(".right-arrow");
+    const filterContainer = document.querySelector(".filter-container");
+
+    leftArrow.addEventListener("click", function () {
+      filterContainer.scrollBy({
+        left: -200, // Adjust as needed
+        behavior: "smooth",
+      });
+    });
+
+    rightArrow.addEventListener("click", function () {
+      filterContainer.scrollBy({
+        left: 200, // Adjust as needed
+        behavior: "smooth",
+      });
+    });
+});
