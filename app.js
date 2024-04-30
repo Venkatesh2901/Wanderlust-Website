@@ -1,3 +1,6 @@
+const initData = require("./init/data.js");
+const Listing = require("./models/listing.js");
+
 if(process.env.NODE_ENV!="production"){
    require('dotenv').config();
 }
