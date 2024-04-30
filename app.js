@@ -33,7 +33,7 @@ app.use(methodOverride("_method"));
 
 app.engine("ejs",ejsMate);
 
-const port = 9999;
+const port = 8080;
 
 const dbUrl = process.env.ATLASTDB_URL;
 
