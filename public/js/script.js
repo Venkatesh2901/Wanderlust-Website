@@ -55,16 +55,16 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// Navbar 
+// Navbar Hamburger Menu 
 const hamMenu = document.querySelector("#toggleChecker");
-  const profileMenu = document.querySelector(".nav-profile");
+const profileMenu = document.querySelector(".nav-profile");
 
-  hamMenu.addEventListener("click", () => {
-    if (profileMenu.style.visibility != "visible") {
-      profileMenu.style.visibility = "visible";
-      profileMenu.style.opacity = 1;
-    } else {
-      profileMenu.style.visibility = "hidden";
-      profileMenu.style.opacity = 0;
-    }
-  });
+hamMenu.addEventListener("click", () => {
+  if (profileMenu.style.visibility != "visible") {
+    profileMenu.style.visibility = "visible";
+    profileMenu.style.opacity = 1;
+  } else {
+    profileMenu.style.visibility = "hidden";
+    profileMenu.style.opacity = 0;
+  }
+});
