@@ -52,3 +52,17 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 });
+
+// Navbar 
+const hamMenu = document.querySelector("#toggleChecker");
+  const profileMenu = document.querySelector(".nav-profile");
+
+  hamMenu.addEventListener("click", () => {
+    if (profileMenu.style.visibility != "visible") {
+      profileMenu.style.visibility = "visible";
+      profileMenu.style.opacity = 1;
+    } else {
+      profileMenu.style.visibility = "hidden";
+      profileMenu.style.opacity = 0;
+    }
+  });

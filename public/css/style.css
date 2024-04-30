@@ -9,37 +9,158 @@ body{
     flex:1;
 }
 
-/* navbar */
+/* Navbar */
 .navbar{
-   height: 5rem;
-   background-color: white;
+  height: 5rem;
+  background-color: #fff;
 }
 
 .fa-compass{
-    color:#fe424d;
-    font-size: 2rem;
+  color: #fe424d;
+  font-size: 2.5rem;
 }
 
 .nav-link{
-    color:#222222 !important
+  color: #222222;
 }
 
-.search-inp{
-    border-radius: 25px !important;
-    padding: 0.5rem 3rem 0.5rem 3 rem;
+.navbar-collapse {
+background-color: #fff;
 }
 
-.search-btn{
-    background-color: #fe424d !important;
-    color: white !important; 
-    width:10rem;
-    padding: 0 1rem 0 1rem;
-    border-radius: 25px !important;
+.container-nav{
+position: relative;
+width: 100%;
 }
+
+.navbar-brand {
+left: 15px;
+  position: absolute;
+}
+
+.navbar-nav{
+margin: 0 auto;
+width: 393px;
+}
+
+#togglerLable{
+position: absolute;
+  right: 15px;
+  top: 0;
+}
+
+
+.search-btn {
+  background-color: #fe424d;
+  color: #fff;
+  border-radius: 25px;
+  padding: 0 1rem 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-btn p {
+  margin: 0;
+}
+
+.search-btn:hover {
+  background-color: #fe424d;
+  color: #fff;
+}
+
 .search-btn i {
-    display: inline !important; 
-    margin-right: 0.5rem;
+  display: inline;
+  margin-right: 0.5rem;
 }
+
+.search-inp {
+  border-radius: 25px;
+  padding: 0.5rem 3rem 0.5rem 3rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Hamburger menu */
+.checkboxtoggler {
+  margin-top: 0.5em;
+  width: 1.8em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  cursor: pointer;
+}
+
+.line-1 {
+  background: #df6447;
+  height: 0.3em;
+  border-radius: 10em;
+  transition-duration: 500ms;
+}
+
+.line-2 {
+  background: #df6447;
+  height: 0.3em;
+  border-radius: 10em;
+  transition-duration: 500ms;
+}
+
+.line-3 {
+  background: #df6447;
+  height: 0.3em;
+  border-radius: 10em;
+  transition-duration: 500ms;
+}
+
+#toggleChecker {
+  height: 3em;
+  width: 100%;
+  display: none;
+}
+
+#toggleChecker:checked + #togglerLable .checkboxtoggler .line-1 {
+  -webkit-transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
+  -ms-transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
+  transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
+}
+
+#toggleChecker:checked + #togglerLable .checkboxtoggler .line-2 {
+  -webkit-transform: rotate(-45deg) translateY(0em) translateX(0.1em);
+  -ms-transform: rotate(-45deg) translateY(0em) translateX(0.1em);
+  transform: rotate(-45deg) translateY(0em) translateX(0.1em);
+}
+
+#toggleChecker:checked + #togglerLable .checkboxtoggler .line-3 {
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.nav-profile {
+  position: absolute;
+  display: flex;
+  flex-direction: column !important;
+  justify-content: center;
+  top: 3rem;
+  right: 1.2rem;
+  align-items: center !important;
+  min-height: 8rem;
+  min-width: 10rem;
+  padding: 1.5rem;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.201);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+  gap: 0.5rem;
+  /* display: none; */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.nav-profile a:hover {
+  color: #fe424d;
+}
+
 
 /*Footer*/
 .f-info-links a{
@@ -57,7 +178,7 @@ body{
     align-items: center;
 }
 
-.f-info-socials i{
+.f-info-socials a i{
     font-size: 1.2rem;
     margin-right: 1rem;
 }
@@ -238,26 +359,14 @@ body{
     display: flex;
     align-items: center;
   }
-
-  @media (max-width: 768px) {
-    .scrollable-tabs-container {
-      max-width: 100%; /* Adjust as needed */
-      overflow-x: auto;
-      display: flex;
-    }
-    .scrollable-tabs-container .filter-container {
-      display: flex;
-      flex-wrap: nowrap;
-    }
-    .scrollable-tabs-container .left-arrow,
-    .scrollable-tabs-container .right-arrow {
-      display: flex;
-    }
+  
+@media(max-width:992px){
+  .tax-toggle{
+    height:3.5rem;
+    width: 7.5rem;
+    
+  }  
 }
-
-
-
-
  
 /* show page */
 .show-img{

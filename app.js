@@ -1,6 +1,3 @@
-const initData = require("./init/data.js");
-const Listing = require("./models/listing.js");
-
 if(process.env.NODE_ENV!="production"){
    require('dotenv').config();
 }
@@ -34,6 +31,7 @@ app.use(methodOverride("_method"));
 app.engine("ejs",ejsMate);
 
 const port = 8080;
+
 const dbUrl = process.env.ATLASTDB_URL;
 
 const initDB = async()=>{
