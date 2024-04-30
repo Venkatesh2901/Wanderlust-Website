@@ -1,27 +1,27 @@
 
+// Example starter JavaScript for disabling form submissions if there are invalid fields
 (() => {
-    'use strict'
-  
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    const forms = document.querySelectorAll('.needs-validation')
-  
-    // Loop over them and prevent submission
-    Array.from(forms).forEach(form => {
-      form.addEventListener('submit', event => {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
-  
-        form.classList.add('was-validated')
-      }, false)
-    })
-  });
+  'use strict'
 
-  //Index.js : Making Tax Switch
-  let taxSwitch = document.getElementById("flexSwitchCheckDefault");
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
 
-  taxSwitch.addEventListener("click",()=>{
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+
+//Index.js : Making Tax Switch
+let taxSwitch = document.getElementById("flexSwitchCheckDefault");
+taxSwitch.addEventListener('click',()=>{
      let taxInfo = document.getElementsByClassName("tax-info");
      for( info of taxInfo){
          if(info.style.display!="inline"){
@@ -32,6 +32,7 @@
          }
      }
   });
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const leftArrow = document.querySelector(".left-arrow");
@@ -45,13 +46,14 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
-    rightArrow.addEventListener("click", function () {
+    rightArrow.addEventListener('click', function () {
       filterContainer.scrollBy({
         left: 200, // Adjust as needed
         behavior: "smooth",
       });
     });
 });
+
 
 // Navbar 
 const hamMenu = document.querySelector("#toggleChecker");
